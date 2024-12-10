@@ -162,7 +162,6 @@ var maxPeers = parseInt(prompt("Max Users (default:5, max:99)"));
 if (isNaN(maxPeers) || maxPeers <= 99 || maxPeers >= 1) maxPeers = 5;
 maxPeers++;
 var peerId = prompt("Enter a room ID");
-alert(peerId)
 peerId = peerId.toLowerCase().replace(/\s/, "");
 if (peerId == null) {
     peerId = randomId()
