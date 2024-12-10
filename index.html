@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2196F1" />
+    <title>Korona P2P Chat</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      code {
+        color: #f50;
+        /* border: 1px solid #f50;
+        padding: 2px 6px;
+        border-radius: 4px;*/
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: #222;
+        color: #fff;
+        font-family: Arial;
+        height: 100%;
+      }
+
+      #shareable-link {
+        cursor: pointer;
+      }
+
+      #top-panel {
+        padding: 8px;
+      }
+      #top-panel p {
+        margin: 2px;
+      }
+      #chat-panel {
+        flex: 1;
+        padding: 0 8px;
+        overflow-y: auto;
+      }
+      #bottom-panel {
+        padding: 8px;
+        display: flex;
+        flex-direction: row;
+      }
+      #message-input {
+        flex: 1;
+        padding: 8px;
+        margin-right: 4px;
+      }
+      #send-button {
+        cursor: pointer;
+      }
+
+      .message-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 8px 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      code.sender {
+        margin-right: 8px;
+      }
+      p.message {
+        margin: 0;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top-panel">
+      <p>Your id is <code id="peer-id">connecting...</code>, currently <code id="peers-number">0</code> peer(s) online</code></p>
+      <p>
+        Copy <code id="shareable-link" onclick="selectText(this.id)">connecting...</code> to your friends to let
+        them join your chat
+      </p>
+    </div>
+    <div id="chat-panel">
+
+    </div>
+    <div id="bottom-panel">
+      <input id="message-input" placeholder="Please wait..." autofocus disabled /> 
+      <button id="send-button">Send</button>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.6/dist/peerjs.min.js"></script>
+  <script src="bundle.js"></script>
+  <script src="index.js"></script>
+</html>
