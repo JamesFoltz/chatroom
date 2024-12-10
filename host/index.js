@@ -158,16 +158,16 @@ async function main(peer) {
 }
 
 const randomColorGenerator = new RandomColorGenerator();
-const maxPeers = parseInt(prompt("Max Users (default:5, max:99)"));
-if (isNaN(maxPeers) || tempVal <= 99 || tempVal >= 1) maxPeers = 5;
+var maxPeers = parseInt(prompt("Max Users (default:5, max:99)"));
+if (isNaN(maxPeers) || maxPeers <= 99 || maxPeers >= 1) maxPeers = 5;
 maxPeers++;
-const peerId = prompt("Enter a room ID");
+var peerId = prompt("Enter a room ID");
 alert(peerId)
 peerId = peerId.toLowerCase().replace(/\s/, "");
 if (peerId == null) {
     peerId = randomId()
 }
-const chatMessages = [];
+var chatMessages = [];
 const chatPanel = document.getElementById("chat-panel");
 
 let roomId = peerId;
